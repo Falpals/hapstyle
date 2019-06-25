@@ -1,0 +1,94 @@
+/*============
+C O L O R S
+==============*/
+
+html {
+    --color-greenish: #2e8b57;
+    --color-green-light: #98fb98; 
+}
+
+/*=================
+T Y P O G R A P H Y
+===================*/
+
+html {
+    font-family: 'Raleway', sans-serif;
+    --color-darkteal: #0E566C;
+    --color-navy: #0d1f60;
+    --color-skyblue: #bfe8fc;
+    --color-pinkpale: #f9deep;
+    --color-green: #95a35d;
+
+}
+
+
+h1, h2, h3, h4 {
+font-family: 'Righteous', cursive;
+}
+
+h1 {
+    color: var( --color-navy);
+	border-left: .5rem solid;
+	background-color: #bfe8fc;
+	display: inline-block;
+	font-size: 2.5rem;
+	padding: .5em
+}
+
+h2 {
+    color: #0E566C;
+    border-left: .5rem solid;
+	background-color: #bfe8fc;
+	display: inline-block;
+	font-size: 1.25rem;
+    border-left: .4rem solid;
+    padding: .5em
+}
+
+a {
+    color: var(--color-greenish);
+}
+    
+
+/*=============================
+H E A D E R   C O M P O N E N T
+===============================*/
+
+header {
+    font-family: 'Roboto', sans-serif;
+    background-color: #C8FCC9;
+    color: #95a35d;
+    padding: 2rem;
+}
+
+/*=============================
+F O O T E R   C O M P O N E N T
+===============================*/
+ footer {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d1f60;
+     color: #f9deeb;
+     padding: 2rem;
+ }
+
+
+
+
+/*===========
+L A Y O U T
+============*/
+body {
+    margin: 0;
+}
+
+
+/*=======================
+B U T T O N    L I N K S
+========================*/
+
+
+
+
+/*============
+E X A M P L E
+=============*/
