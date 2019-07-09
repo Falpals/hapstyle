@@ -12,38 +12,80 @@ T Y P O G R A P H Y
 ===================*/
 
 html {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-body);
     --color-darkteal: #0E566C;
     --color-navy: #0d1f60;
     --color-skyblue: #bfe8fc;
     --color-pinkpale: #f9deep;
     --color-green: #95a35d;
 
+    --font-body: 'Raleway', sans-serif;
+    --font-secondary: 'Righteous', sans-serif;
+
+    --ratio: 1.125;
+
+    --size-1: calc( 1rem * var(--ratio) );
+    --size-2: calc( var(--size-1) * var(--ratio) );
+    --size-3: calc( var(--size-2) * var(--ratio) );
+    --size-4: calc( var(--size-3) * var(--ratio) );
+    --size-5: calc( var(--size-4) * var(--ratio) );
+    --size-6: calc( var(--size-5) * var(--ratio) );
+
+    --margin: calc( var(--margin-standard: 2rem * var(--ratio)));
+
 }
 
 
-h1, h2, h3, h4 {
-font-family: 'Righteous', cursive;
+h1, h2, h3, h4, h5 {
+font-family: var(--font-secondary);
 }
 
 h1 {
     color: var( --color-navy);
 	border-left: .5rem solid;
 	background-color: #bfe8fc;
-	display: inline-block;
-	font-size: 2.5rem;
+	font-size: 2.0rem;
 	padding: .5em
 }
 
 h2 {
     color: #0E566C;
     border-left: .5rem solid;
-	background-color: #bfe8fc;
-	display: inline-block;
-	font-size: 1.25rem;
+	background-color: #bedfe6;
+	font-size: 1.5rem;
     border-left: .4rem solid;
     padding: .5em
 }
+
+h3 {
+    font-size: var(--size-4);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: var(--size-3);
+
+}
+
+h5 {
+    border: solid #bfe8fc;
+    color: #0d1f60;
+    font-size: var(--size-2);
+    padding: .4em;
+    text-transform: uppercase;
+}
+
+h6 {
+    border-left: .3rem solid #bedfe6;
+    border-right: .3rem solid #bedfe6;
+    color: #0E566C;
+    font-size: var(--size-1);
+    padding: .3em;
+    text-transform: uppercase;
+
+}
+
 
 a {
     color: var(--color-greenish);
@@ -78,9 +120,19 @@ F O O T E R   C O M P O N E N T
 L A Y O U T
 ============*/
 body {
-    margin: 0;
+    margin: 2;
+}
+/*
+aside {
+    margin: 16,16,16,16;
+}
+*/
+aside {
+    padding: 0rem, 6rem, 0, 6rem;
 }
 
+@media ( min-width: 600px ) {
+	}
 
 /*=======================
 B U T T O N    L I N K S
@@ -92,3 +144,6 @@ B U T T O N    L I N K S
 /*============
 E X A M P L E
 =============*/
+.example-righteous {
+    font-family: var(--font-secondary);
+}
