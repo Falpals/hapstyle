@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<main>
+
 <head>
 
 	<meta charset="UTF-8">
@@ -10,26 +10,178 @@
     
     <link href="hapstyle.css" rel="stylesheet">
 
-	<!--Additional elements for browsers and robots goes here goes here-->
-    <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-
-    <nav><ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="style.html">Style</a></li>
-        <li><a href="components.html">Components</a></li>
-        <li><a href="layouts.html">Layout</a></li>
-    </ul></nav>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700|Righteous&display=swap" rel="stylesheet">
 </head>
 
-<footer>
-        <ul>
-            <li>About me:   Janet Martin &copy; 2019</li>
-            <li>Facebook:   Ja Martin</li>
-            <li>Twitter:    https://twitter.com/jmartin_ux</li>
-            <li>GitHub:     FalPals</li></ul>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="style.html">Style</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="layouts.html">Layout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
 
-    </footer>
-</main>
-</body>
+        <h1>Design System Components</h1>
+        <h2>Button Links</h2>
+        <figure>
+            <a href="" class="button-link button-link-hero">Hero Button</a>
+
+            <a href="" class="button-link">Normal Button</a>
+
+            <a href="" class="button-link button-link-tertiary">Tertiary Button</a>
+        </figure>
+
+        <h2>Accordions</h2>
+        <figure>
+            <details>
+                <summary>
+                        <strong>Happenings' signature evening event</strong>
+                </summary>
+
+                <div>
+                    <p>Details of evening events</p>
+                </div>
+
+            </details>
+
+            <details>
+                <summary>
+                    <strong>Indoor daytime event plan</strong>
+                </summary>
+
+                <div>
+                    <p>Details of next level event</p>
+                </div>
+
+            </details>
+
+            <details>
+                <summary>
+                    <strong>Outdoor event plan</strong>
+                </summary>
+    
+                <div>
+                    <p>Details of outdoor event</p>
+                </div>
+    
+            </details>
+        </figure>
+
+
+        <h2>Modal Dialog</h2>
+
+        <figure>
+            <button id="open-modal" type="button">Open Modal</button>
+
+            <dialog id="modal-demo">Three Animated Buttons</dialog>
+        </figure>
+    </main>
+
+        <h2>Form Inputs</h2>
+
+        <form action="">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name">
+
+            <label for="name">Disabled</label>
+            <input type="text" id="name" name="name" disabled>
+
+            <label for="name">Error</label>
+            <div class="errormsg">OOPS, WE DID NOT QUITE CATCH THAT.  PLEASE TRY AGAIN.</div>
+            <input type="text" id="name" name="name" class="error">
+
+            
+
+
+            
+            <label for="select">Select</label>
+            <select id="select" name="select">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+
+            <label for="select">Disabled Select</label>
+            <select id="select" name="select" disabled>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+
+            <label for="select">Error Select</label>
+            <div class="errormsg">OOPS, WE DID NOT QUITE CATCH THAT.  PLEASE TRY AGAIN.</div>
+            <select id="select" name="select" class="error">   
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+                            
+            <label for="textarea">Text Area</label>
+            <textarea id="textarea" name="textarea"></textarea>
+
+            <label for="disabledtextarea" name="disabledtextarea">Disabled Text Area</label>
+            <textarea id="textarea" name="disabledtextarea" disabled></textarea>
+
+            <label for="errortextarea">Error Text Area</label>
+            <div class="errormsg">OOPS, WE DID NOT QUITE CATCH THAT.  PLEASE TRY AGAIN.</div>
+            <textarea id="textarea" name="select" class="error"></textarea>
+
+
+            <a href="" class="button-link"> Submit </a>
+
+
+
+
+
+        
+
+        </form>
+
+
+    <footer>
+            <figure>
+                J.M. &copy; 2019
+                <ul>
+                <li>Twitter:    <a href="https://twitter.com/jmartin_ux">https://twitter.com/jmartin_ux</a></li>
+                <li>GitHub:     <a href="https://github.com/Falpals">FalPals</a></li></ul>
+            </figure>
+                
+            <figure>
+                Brice Junior &copy; 2019
+                <ol>
+                <li>Golden Retriever</li>
+                <li>His father's name was Aspen</li>
+                <li>His uncle's name was Brice</li>
+                <li>Original Brice was neutered; therefore, one of Aspen's puppies is named after Brice.</li>
+                </ol>
+            </figure>
+
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', function(){
+        
+        const modal = document.querySelector('dialog');
+        const open = document.getElementById('open-modal');
+        
+        open.addEventListener('click', () => {
+        modal.showModal();
+        });
+        
+        modal.addEventListener('click', event => {
+        if (event.target === modal) {
+        modal.close('cancelled');
+        }
+        });
+        
+        });
+        </script>
+        
+    </body>        
+
 </html>    
